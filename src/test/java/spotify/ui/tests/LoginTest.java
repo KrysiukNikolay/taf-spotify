@@ -33,4 +33,12 @@ public class LoginTest extends BaseTest {
     LoginUserSteps.stepsUserLogIn(UserData.USER_EMAIL, UserData.EMPTU_USER_PASSWORD);
     Assertions.assertEquals(expected, loginPage.errorMessageAutorization());
   }
+  @Test
+  @DisplayName("Авторизация с рандомными данными")
+  public void testLoginRandomDataUser() {
+    LoginPage loginPage = new LoginPage();
+    String expected = "Incorrect username or password.";
+    LoginUserSteps.stepsUserLogIn(UserData.RANDOM_USER_EMAIL, UserData.RANDOM_USER_PASSWORD);
+    Assertions.assertEquals(expected, loginPage.errorMessageAutorization());
+  }
 }
