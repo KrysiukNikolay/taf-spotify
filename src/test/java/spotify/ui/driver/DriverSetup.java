@@ -22,11 +22,13 @@ public class DriverSetup {
      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     return driver;
+
   }
 
 
   public static void closeDriver() {
     driver.quit();
     driver = null;
+
   }
 }

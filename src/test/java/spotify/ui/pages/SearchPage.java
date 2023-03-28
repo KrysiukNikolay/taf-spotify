@@ -12,13 +12,19 @@ public class SearchPage extends BasePage {
         WebElement buttonSearch = driver.findElement(BUTTON_SEARCH);
         buttonSearch.click();
         return this;
+
     }
+
     public void inputSearchRequest(String request) {
         WebElement formSearch = driver.findElement(FORM_SEARCH);
         formSearch.sendKeys(request);
+
     }
+
     public String nameAfterSearchArtist(){
         WebElement searchArtist = driver.findElement(NAME_ARTIST_AFTER_SEARCH);
         return searchArtist.getText().toLowerCase();
+
     }
+
 }

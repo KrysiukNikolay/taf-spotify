@@ -3,7 +3,6 @@ package spotify.ui.tests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import spotify.ui.pages.HomePage;
 import spotify.ui.pages.LoginPage;
 import spotify.ui.steps.LoginUserSteps;
 import spotify.ui.util.UserData;
@@ -16,6 +15,7 @@ public class LoginTest extends BaseTest {
     LoginPage loginPage = new LoginPage();
     LoginUserSteps.stepsUserLogIn(UserData.USER_EMAIL, UserData.USER_PASSWORD);
     Assertions.assertTrue(loginPage.isDisplayedAvatar());
+
   }
   @Test
   @DisplayName("Авторизация с пустым логином(email) ")
@@ -24,6 +24,7 @@ public class LoginTest extends BaseTest {
     LoginPage loginPage = new LoginPage();
     LoginUserSteps.stepsUserLogIn(UserData.EMPTY_USER_EMAIL, UserData.USER_PASSWORD);
     Assertions.assertEquals(expected, loginPage.errorMessageAutorization());
+
   }
   @Test
   @DisplayName("Авторизация с пустым паролем ")
@@ -32,6 +33,7 @@ public class LoginTest extends BaseTest {
     LoginPage loginPage = new LoginPage();
     LoginUserSteps.stepsUserLogIn(UserData.USER_EMAIL, UserData.EMPTU_USER_PASSWORD);
     Assertions.assertEquals(expected, loginPage.errorMessageAutorization());
+
   }
   @Test
   @DisplayName("Авторизация с рандомными данными")
@@ -40,5 +42,7 @@ public class LoginTest extends BaseTest {
     String expected = "Incorrect username or password.";
     LoginUserSteps.stepsUserLogIn(UserData.RANDOM_USER_EMAIL, UserData.RANDOM_USER_PASSWORD);
     Assertions.assertEquals(expected, loginPage.errorMessageAutorization());
+
   }
+
 }

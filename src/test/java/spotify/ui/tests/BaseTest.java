@@ -9,9 +9,13 @@ public class BaseTest extends HomePage {
     @BeforeEach
     public void warmUP(){
         openWebSite();
+
 }
+
     @AfterEach
     public void tearDown() {
         DriverSetup.closeDriver();
+
   }
+
 }

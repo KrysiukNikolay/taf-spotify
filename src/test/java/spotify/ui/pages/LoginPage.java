@@ -18,32 +18,40 @@ public class LoginPage extends BasePage {
     WebElement userNameLogIn = driver.findElement(INPUT_USERNAME);
     userNameLogIn.sendKeys(username);
     return this;
+
   }
 
   public LoginPage inputPassword(String password) {
     WebElement userPassword = driver.findElement(INPUT_PASSWORD);
     userPassword.sendKeys(password);
     return this;
+
   }
 
   public LoginPage clickLogin() {
     WebElement buttonLogIn = driver.findElement(BUTTON_LOGIN_BASE_PAGE);
     buttonLogIn.click();
     return this;
+
   }
 
   public LoginPage enterLoginUser() {
     WebElement buttonLogInUser = driver.findElement(BUTTON_LOGIN_AUTORIZATION_PAGE);
     buttonLogInUser.click();
     return this;
+
   }
+
   public boolean isDisplayedAvatar() {
     WebElement userAvatar = driver.findElement(USER_IMG_AVATAR);
     return userAvatar.isDisplayed();
+
   }
+
   public String errorMessageAutorization(){
     WebElement errorAutorization = driver.findElement(TEXT_INCORRECT_USERNAME_OR_PASSWORD);
     return errorAutorization.getText();
+
   }
 
 }

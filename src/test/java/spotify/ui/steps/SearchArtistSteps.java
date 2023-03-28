@@ -1,6 +1,5 @@
 package spotify.ui.steps;
 
-import spotify.ui.pages.LoginPage;
 import spotify.ui.pages.SearchPage;
 
 public class SearchArtistSteps {
@@ -9,6 +8,6 @@ public class SearchArtistSteps {
                 .clickSearch()
                 .inputSearchRequest(nameArtist);
 
-
     }
+
 }

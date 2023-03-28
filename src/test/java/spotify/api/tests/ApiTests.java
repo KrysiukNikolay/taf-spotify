@@ -1,10 +1,7 @@
 package spotify.api.tests;
 
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-
 import org.json.simple.JSONObject;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import spotify.api.config.ApiSpotifyConfig;
@@ -26,6 +23,7 @@ public class ApiTests {
                 .log().all()
                 .assertThat()
                 .statusCode(200);
+
     }
 
     @Test
@@ -44,6 +42,7 @@ public class ApiTests {
                 .response();
 
     }
+
     @Test
     @DisplayName("Создание playlist методом POST")
     public void testCreatePlaylistReturns201() {
@@ -58,9 +57,10 @@ public class ApiTests {
                 .accept(ContentType.JSON)
                 .body(playlist.toJSONString())
                 .when()
-                .post(ApiSpotifyConfig.ENDPOINT_URL+ "users/" + ApiSpotifyConfig.EXPECTED_USER_ID + "/playlists")
+                .post(ApiSpotifyConfig.ENDPOINT_URL + "users/" + ApiSpotifyConfig.EXPECTED_USER_ID + "/playlists")
                 .then().log().all()
                 .assertThat()
                 .statusCode(201);
+
     }
 }
