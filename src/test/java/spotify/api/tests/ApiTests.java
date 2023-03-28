@@ -52,7 +52,7 @@ public class ApiTests {
         playlist.put("description", ApiSpotifyConfig.PLAYLIST_DESCRIPTION);
 
         given()
-                .header("Authorization", "Bearer " + ApiSpotifyConfig.ACCESS_TOKEN)
+                .header("Authorization", "Bearer " + GetToken.ACCESS_TOKEN)
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
                 .body(playlist.toJSONString())
