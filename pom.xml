@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>By.itacademy</groupId>
+    <groupId>by.itacademy</groupId>
     <artifactId>taf-spotify</artifactId>
     <version>1.1</version>
     <build>
@@ -19,7 +19,6 @@
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -54,7 +53,5 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
-
     </dependencies>
-
 </project>

@@ -6,10 +6,11 @@ import org.junit.jupiter.api.Test;
 import spotify.ui.pages.SearchPage;
 import spotify.ui.steps.LoginUserSteps;
 import spotify.ui.steps.SearchArtistSteps;
-import spotify.ui.util.ArtistData;
-import spotify.ui.util.UserData;
+import spotify.ui.data.ArtistData;
+import spotify.ui.data.UserData;
 
 public class SearchTest extends BaseTest {
+
     @Test
     @DisplayName("Проверка поисковой строки")
     public void testSearchArtist(){
@@ -18,5 +19,4 @@ public class SearchTest extends BaseTest {
         SearchArtistSteps.stepsSearchArtist(ArtistData.nameArtist);
         Assertions.assertEquals(ArtistData.nameArtist, searchPage.nameAfterSearchArtist());
     }
-
 }

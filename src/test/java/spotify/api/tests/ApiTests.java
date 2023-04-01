@@ -18,12 +18,11 @@ public class ApiTests {
         given()
                 .header("Authorization", "Bearer " + GetToken.ACCESS_TOKEN)
                 .when()
-                .get(ApiSpotifyConfig.ENDPOINT_URL + "me")
+                .get(ApiSpotifyConfig.ENDPOINT_URL + "/me")
                 .then()
                 .log().all()
                 .assertThat()
                 .statusCode(200);
-
     }
 
     @Test
@@ -32,7 +31,7 @@ public class ApiTests {
         given()
                 .header("Authorization", "Bearer " + GetToken.ACCESS_TOKEN)
                 .when()
-                .get(ApiSpotifyConfig.ENDPOINT_URL + "me")
+                .get(ApiSpotifyConfig.ENDPOINT_URL + "/me")
                 .then().log().all()
                 .assertThat()
                 .body("id", equalTo(ApiSpotifyConfig.EXPECTED_USER_ID))
@@ -40,7 +39,6 @@ public class ApiTests {
                 .statusCode(200)
                 .extract()
                 .response();
-
     }
 
     @Test
@@ -57,10 +55,9 @@ public class ApiTests {
                 .accept(ContentType.JSON)
                 .body(playlist.toJSONString())
                 .when()
-                .post(ApiSpotifyConfig.ENDPOINT_URL + "users/" + ApiSpotifyConfig.EXPECTED_USER_ID + "/playlists")
+                .post(ApiSpotifyConfig.ENDPOINT_URL + "/users/" + ApiSpotifyConfig.EXPECTED_USER_ID + "/playlists")
                 .then().log().all()
                 .assertThat()
                 .statusCode(201);
-
     }
 }
