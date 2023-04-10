@@ -23,7 +23,7 @@ public class SearchPage extends BasePage {
         formSearch.sendKeys(request);
     }
 
-    public String nameAfterSearchArtist(){
+    public String nameAfterSearchArtist() {
         WebElement searchArtist = driver.findElement(NAME_ARTIST_AFTER_SEARCH);
         Highlight.highlight(searchArtist);
         return searchArtist.getText().toLowerCase();
