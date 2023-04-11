@@ -2,5 +2,5 @@ package spotify.api.token;
 
 public class GetToken {
 
-    public static final String ACCESS_TOKEN = "BQAHQjMO7_70qTPYT6dNGeCDFXI4R6UaTlx8Ex-gaLhHDShp4rBK8OiWnx_zt09bKw_8chwEZqhO-7ma1J3qVMsviwUPmfBASKXrtjjsnr5YwtDCY3eRPQOjY8Vt8s_EGehV55_vcd7B6jmZ6OzXEvUd4b0MH2uVIb3MmdDLNN3UZTA0ifw4ajgLChYl-nDgaKKwFEYJY4lCJ88CxMHd8VIXjVCocj1lWYuDkLp97hcXwhdlm2jOTjrMppcJRSAF7N7Up2JaJq_sIX0";
+    public static final String ACCESS_TOKEN = "";
 }

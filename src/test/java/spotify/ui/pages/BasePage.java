@@ -5,7 +5,7 @@ import spotify.ui.driver.DriverSetup;
 
 public class BasePage {
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
     public BasePage() {
         driver = DriverSetup.createDriver();
