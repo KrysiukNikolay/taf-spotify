@@ -13,7 +13,7 @@ public class UserData {
     public static final String RANDOM_USER_EMAIL = faker.internet().emailAddress();
     public static final String RANDOM_USER_PASSWORD = faker.internet().password(
             7
-            , 14
-            , true
-            , true);
+            ,14
+            ,true
+            ,true);
 }
