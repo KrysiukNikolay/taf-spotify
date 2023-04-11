@@ -14,13 +14,15 @@ public class DriverSetup {
 
     public static WebDriver createDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*", "--incognito", "--lang=en");
+
+        options.addArguments("--headless", "--remote-allow-origins=*", "--incognito", "--lang=en", "--disable-dev-shm-usage");
+
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
         }
         return driver;
     }
