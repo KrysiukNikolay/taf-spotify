@@ -9,6 +9,5 @@ public class Highlight extends BasePage {
     public static void highlight(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].setAttribute('style', 'border: 6px solid red; background:yellow');", element);
-        js.executeScript("arguments[0].setAttribute('style', 'border: none; background:yellow');", element);
     }
 }

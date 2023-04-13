@@ -14,7 +14,7 @@ public class DriverSetup {
 
     public static WebDriver createDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--remote-allow-origins=*", "--incognito", "--lang=en", "--disable-dev-shm-usage");
+        options.addArguments("--remote-allow-origins=*", "--incognito", "--lang=en");
         if (driver == null) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
